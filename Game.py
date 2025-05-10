@@ -1,4 +1,8 @@
 import random
+
+
+
+
 def game():
     while True:
         #Preamble & Rules
@@ -7,7 +11,8 @@ def game():
               "Rock vs Paper ==> Paper Wins!\n"
               "Rock vs Scissor ==> Rock Wins!\n"
               "Paper vs Scissor ==> Scissor Wins!\n\n")
-
+        p_count = 0
+        c_count = 0
         # Player Turn
         print("***   Player Turn   ***\n"
               "Enter your choice: \n"
@@ -49,11 +54,15 @@ def game():
 
 
         if p_choice==c_choice:
+            result=1
             print("\n***   Its a tie   ***\n")
         elif (p_choice==1 and c_choice==2) or (p_choice==2 and c_choice==3) or (p_choice==3 and c_choice==1):
+            result=2
             print("\n***   Computer Wins   ***\n")
         else:
+            result=3
             print("\n***   Player Wins   ***\n")
+
 
         p_again = input("Do you want to play again?\n "
                         "Press y to play again\n"
@@ -69,4 +78,3 @@ def game():
 
 
 game()
-
